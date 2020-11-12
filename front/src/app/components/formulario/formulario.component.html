@@ -1,0 +1,69 @@
+<mat-card>
+  <mat-card-subtitle>Informacíon del usuario</mat-card-subtitle>
+  <mat-card-content>
+    <form [style.fontSize.px]="14" [formGroup]="userForm">
+      <div class="inputs">
+        <mat-form-field appearance="fill">
+          <mat-label>Id</mat-label>
+          <input matInput formControlName="idUsuario" type="number" />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Nombre</mat-label>
+          <input
+            matInput
+            formControlName="nombre"
+            placeholder="Ingrese el nombre del usuario"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Rol</mat-label>
+          <mat-select formControlName="rol" required>
+            <mat-option *ngFor="let r of roles" [value]="r.idRol">
+              {{ r.nombre }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div>
+          <label>Activo *</label>
+          <mat-radio-group formControlName="activo" required>
+            <mat-radio-button value="0">Si</mat-radio-button>
+            <mat-radio-button value="1">No</mat-radio-button>
+          </mat-radio-group>
+          <mat-error *ngIf="activo.invalid && activo.touched"
+            >Selecciona una opción</mat-error
+          >
+        </div>
+      </div>
+      <div class="buttons">
+        <button
+          type="button"
+          mat-raised-button
+          color="primary"
+          [disabled]="!isCreating"
+          (click)="saveUser()"
+        >
+          Guardar
+        </button>
+        <button
+          type="button"
+          mat-raised-button
+          color="accent"
+          [disabled]="!isEditing"
+          (click)="updateUser()"
+        >
+          Editar
+        </button>
+        <button
+          type="button"
+          mat-raised-button
+          color="warn"
+          [disabled]="!isEditing"
+          (click)="deleteUser()"
+        >
+          Eliminar
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

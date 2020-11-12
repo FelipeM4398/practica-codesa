@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  font-family: "Nunito Sans", sans-serif !important;
+}
+
+.material-icons {
+  font-family: "Material Icons" !important;
+}
+
+body {
+  margin: 0;
+  background-color: #e8eaf6;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+div .mat-radio-button {
+  margin: 0 12px;
+}
+
+.mat-raised-button.mat-primary.mat-button-disabled {
+  background-color: #3f51b5;
+  color: #fff;
+  opacity: 0.6;
+}
+
+.mat-raised-button.mat-accent.mat-button-disabled {
+  background-color: #ff4081;
+  color: #fff;
+  opacity: 0.6;
+}
+
+.mat-raised-button.mat-warn.mat-button-disabled {
+  background-color: #f44336;
+  color: #fff;
+  opacity: 0.6;
+}

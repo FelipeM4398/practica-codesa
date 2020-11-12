@@ -1,0 +1,16 @@
+table {
+  width: 100%;
+}
+
+tr.mat-row:hover {
+  background-color: #90caf9;
+  cursor: pointer;
+}
+
+.mat-header-cell {
+  font-size: 14px;
+}
+
+.mat-mini-fab {
+  margin-bottom: 0.5rem;
+}

@@ -1,0 +1,29 @@
+<mat-card>
+  <mat-card-subtitle>Parámetros de búsqueda</mat-card-subtitle>
+  <mat-card-content>
+    <div class="container-search">
+      <mat-form-field appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input matInput [formControl]="search" />
+      </mat-form-field>
+      <button
+        mat-mini-fab
+        color="primary"
+        matTooltip="Buscar"
+        aria-label="Example icon button with a delete icon"
+        (click)="searchUsers()"
+      >
+        <mat-icon>search</mat-icon>
+      </button>
+      <button
+        mat-mini-fab
+        color="warn"
+        matTooltip="Limpiar campos"
+        aria-label="Example icon button with a delete icon"
+        (click)="cleanFields()"
+      >
+        <mat-icon>cleaning_services</mat-icon>
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>
